@@ -1,6 +1,6 @@
 def read_file(filepath):
     try:
-        print(f'Emotes file: {filepath}')
+        # print(f'Emotes file: {filepath}')
         with open(filepath, 'r') as file:
             content = file.readlines()
             content=[url.rstrip('\n') for url in content]
@@ -34,7 +34,7 @@ def check_args(argv):
     DEV_MODE=True
     l=len(argv)
     if l==1 and DEV_MODE: #if executed from vscode gui
-        argv[:]=['','./emotes.txt','./out']
+        argv[:]=['','./emotes','./out']
         return
     # check if there are argv
     if l<=1:
